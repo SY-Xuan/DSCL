@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dscl"
+version = "0.1.0"
+description = "Decoupled Contrastive Learning for Long-Tailed Recognition"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+dependencies = [
+    "opencv-python", "numpy", "torch", "click"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/SY-Xuan/DSCL"
+"Bug Tracker" = "https://github.com/SY-Xuan/DSCL/issues"
+
+[tool.setuptools.packages.find]
+exclude = ["datasets*", "scripts*"]
+
+[tool.wheel]
+exclude = ["datasets*", "scripts*"]
